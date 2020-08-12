@@ -7,5 +7,5 @@ sudo: required
 jobs:
   include:
    - stage: building travis build
-     arch: ppc64le
+     arch: amd64
      script: chmod +x ./build.sh; ./build.sh
