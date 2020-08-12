@@ -1,0 +1,11 @@
+os: linux
+
+service: docker
+
+sudo: required
+
+jobs:
+  include:
+   - stage: building travis build
+     arch: ppc64le
+     script: ls -la
