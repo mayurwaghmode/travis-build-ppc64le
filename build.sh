@@ -8,7 +8,7 @@ cd ./travis-build
 
 git checkout -t origin/enterprise-2.2
 
-docker built -t quay.io/rpsene/travis:build-$ARCH .
+docker build -t quay.io/rpsene/travis:build-$ARCH .
 
 docker login quay.io -u "$ROBOT_USER" -p $ROBOT_TOKEN
 
