@@ -18,6 +18,4 @@ docker login quay.io -u "$ROBOT_USER" -p $ROBOT_TOKEN
 
 docker images
 
-docker images | awk '{print $1}' | awk 'NR==2'
-
-#docker push quay.io/rpsene/travis:build-$ARCH
+docker push quay.io/rpsene/travis:build
