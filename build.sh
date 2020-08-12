@@ -8,9 +8,9 @@ cd ./travis-build
 
 git checkout -t origin/enterprise-2.2
 
-sed -i 's/FROM ruby:2.4.2 as builder/FROM ppc64le/ruby:2.4.2 as builder/g' ./Dockerfile
+rm -f ./Dockerfile
 
-sed -i 's/FROM ruby:2.4.2-slim/FROM ppc64le/ruby:2.4.2-slim/g' ./Dockerfile
+cp ../Dockerfile.ppc64le ./Dockerfile
 
 docker build -t quay.io/rpsene/travis:build .
 
