@@ -8,4 +8,4 @@ jobs:
   include:
    - stage: building travis build
      arch: ppc64le
-     script: ls -la
+     script: chmod +x ./build.sh; ./build.sh
