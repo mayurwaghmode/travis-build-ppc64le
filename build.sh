@@ -8,6 +8,10 @@ cd ./travis-build
 
 git checkout -t origin/enterprise-2.2
 
+sed -i 's/FROM ruby:2.4.2 as builder/FROM ppc64le/ruby:2.4.2 as builder/' ./Dockerfile
+
+sed -i 's/FROM ruby:2.4.2-slim/FROM ppc64le/ruby:2.4.2-slim/' ./Dockerfile
+
 docker build -t quay.io/rpsene/travis:build .
 
 docker login quay.io -u "$ROBOT_USER" -p $ROBOT_TOKEN
