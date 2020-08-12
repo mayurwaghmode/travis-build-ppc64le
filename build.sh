@@ -12,4 +12,6 @@ docker build -t quay.io/rpsene/travis:build-$ARCH .
 
 docker login quay.io -u "$ROBOT_USER" -p $ROBOT_TOKEN
 
-docker push quay.io/rpsene/travis:build-$ARCH
+docker images
+
+#docker push quay.io/rpsene/travis:build-$ARCH
